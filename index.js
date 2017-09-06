@@ -1,7 +1,7 @@
 var childProcess = require('child_process')
 var path = require('path')
 var config = {
-	distPath: path.join(__dirname, 'dist')
+	distPath: path.join(__dirname, 'dist'),
 	tomcat: {
 		docRoot: 'C:\\xampp\\tomcat\\webapps\\angular2devops'
 	}
