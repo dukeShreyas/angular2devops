@@ -12,10 +12,11 @@ childProcess.exec('npm test', (err, stdout, stderr) => {
 		childProcess.exec('npm run build', (err, stdout, stderr) => {
 			if(!err){
 				console.log('Build successfull. Starting tomcat deployment now')		
-				var copyCommand = 'xcopy "' + config.distPath + '" "' + config.tomcat.docRoot + '" /O /X /E /H /K'
+				var copyCommand = 'XCOPY "' + config.distPath + '" "' + config.tomcat.docRoot + '" /O /X /E /H /K'
+				console.log(copyCommand)
 				childProcess.exec(copyCommand, (err, stdout, stderr) => {
 					if(!err){
-						console.log('Build successfully deployed to tomcat server')
+						console.log('Build successfully deployed to tomcat server', stdout)
 					}
 					else{
 						console.log('Failed to deploy to tomcat server. Error:', err)
