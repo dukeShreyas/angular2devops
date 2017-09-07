@@ -69,7 +69,7 @@ describe(`Home`, () => {
   });
 
   it('should have a title', () => {
-    expect(!!comp.title).toEqual(true);
+    expect(!!comp.title).toEqual(false);
   });
 
   it('should log ngOnInit', () => {
