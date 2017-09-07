@@ -7,7 +7,10 @@ var config = {
     }
 }
 childProcess.exec('npm install', (err, stdout, stderr) => {
+    if (!err) {
+        console.log("NPM run was successful.");
     childProcess.exec('npm test', (err, stdout, stderr) => {
+		console.log(stdout);
         if (stdout.indexOf('test failed') === -1 || stdout.indexOf('tests failed') === -1) {
             console.log('Test cases passed. Starting build now')
             childProcess.exec('npm run build', (err, stdout, stderr) => {
@@ -30,7 +33,5 @@ childProcess.exec('npm install', (err, stdout, stderr) => {
             console.log('Aborting build as at least 1 test case(s) are failed')
         }
     })
-    if (!err) {
-        console.log("NPM run was successful.");
-    }
-})
+	}
+	})
