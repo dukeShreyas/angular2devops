@@ -31,6 +31,9 @@ childProcess.exec('npm install', (err, stdout, stderr) => {
                 })
             } else {
                 console.log('Aborting build as at least 1 test case(s) are failed')
+                childProcess.exec('exit 1', (err, stdout, stderr) => {
+					        console.log("**Build Status:Failure**");
+				        })
             }
         })
     }
