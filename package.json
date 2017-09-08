@@ -72,7 +72,7 @@
     "webdriver:update": "webdriver-manager update",
     "webpack-dev-server": "node --max_old_space_size=4096 node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "webpack": "node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js",
-	"jenkins:test": "node index"
+    "jenkins:test": "node index"
   },
   "dependencies": {
     "@angular/animations": "~4.3.1",
@@ -126,6 +126,7 @@
     "karma-chrome-launcher": "^2.0.0",
     "karma-coverage": "^1.1.1",
     "karma-jasmine": "^1.1.0",
+    "karma-junit-sonarqube-reporter": "0.0.1",
     "karma-mocha-reporter": "^2.2.3",
     "karma-remap-coverage": "^0.1.4",
     "karma-sourcemap-loader": "^0.3.7",

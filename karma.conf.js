@@ -1,13 +1,11 @@
-/**
- * @author: @AngularClass
- */
-
-/**
- * Look in ./config for karma.conf.js
- */
-module.exports = require('./config/karma.conf.js');
-singleRun = true;
-reporters = ['dots', 'junit'];
-junitReporter = {
-  outputFile: 'test-results.xml'
+module.exports = function(config) {
+  config.set({
+    reporters: ['progress', 'junit'],
+ 
+    // the default configuration 
+    junitReporter: {
+      outputFile: 'test-results.xml',
+      suite: ''
+    }
+  });
 };
